@@ -27,6 +27,7 @@ const magicIndex = (arr) => {
 //questions: do we return multiple magic index? or just return the first magic index?
 //if the array does NOT have distinct numbers, the above algorithm will not work and can miss the magic index as we are comparing the mid index with the mid value and if there are duplicated numbers it would skip the magic index on the left side of the mid
 //in this case, we would have to do a search on both left and right side
+//create a recursive function that checks the left side of the mid point and the right side of the mid point and then return the magic index whenever it finds one
 const magicIndexNotDistinct = (arr) => {
   let start = 0;
   let end = arr.length - 1;
