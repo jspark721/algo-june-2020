@@ -27,21 +27,26 @@ const magicIndex = (arr) => {
 //questions: do we return multiple magic index? or just return the first magic index?
 //if the array does NOT have distinct numbers, the above algorithm will not work and can miss the magic index as we are comparing the mid index with the mid value and if there are duplicated numbers it would skip the magic index on the left side of the mid
 //in this case, we would have to do a search on both left and right side
-const magicIndexNotDistinct = (arr, start = 0, end = arr.length - 1) => {
-  //base case
-  if (start > end) return -1;
+const magicIndexNotDistinct = (arr) => {
+  let start = 0;
+  let end = arr.length - 1;
+  function findMagicIndex(arr, start, end) {
+    //base case
+    if (start > end) return -1;
 
-  let mid = Math.floor((start + end) / 2);
+    let mid = Math.floor((start + end) / 2);
 
-  if (arr[mid] === mid) return mid;
+    if (arr[mid] === mid) return mid;
 
-  //search left side
-  let left = magicIndexNotDistinct(arr, start, mid - 1);
-  if (left >= 0) return left; //if left returns as -1 that means no magic index was found
+    //search left side
+    let left = findMagicIndex(arr, start, mid - 1);
+    if (left >= 0) return left; //if left returns as -1 that means no magic index was found
 
-  //search right side
-  let right = magicIndexNotDistinct(arr, mid + 1, end);
-  return right;
+    //search right side
+    let right = findMagicIndex(arr, mid + 1, end);
+    return right;
+  }
+  return findMagicIndex(arr, start, end);
 };
 
 console.log(magicIndexNotDistinct([-20, 1, 1, 1, 3, 9, 20])); // 1
