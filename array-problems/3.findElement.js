@@ -29,10 +29,13 @@ const findElement = (arr, element) => {
 console.log(findElement([4, 5, 8, 10, 1, 2, 3], 8)); // return 2
 
 // we can do better and do this in O(log n) running time using binary search
-// the array is originally sorted but with the rotations, we'll have to find the point where the array is not "sorted"
-// if the value at point, in this case, it would be at index 3, value 10 is greater than the value at index 0, then we search the left side of the point
-// else, we'll do binary search on the right side of the point
-// if we find the element in the sub-array, return the index, if not, then return -1
+// the array is originally sorted but with the rotations, we can split the array in half and one side will always be sorted, no matter how many times the array has been rotated
+// when we divide the array in half, we can check which side remained sorted after the rotations
+/*
+example: [4,5,8,10,1,2,3] 
+after we divide the array in half [4,5,8][10,1,2,3]
+so if one side is sorted, in this case, the left, we can check if the element is on that side of the array first, if not, it's on the other side(the right)
+*/
 
 const findElementBinarySearch = (arr, element) => {
   //edge case
@@ -52,17 +55,18 @@ const findElementBinarySearch = (arr, element) => {
 
     //check if left is sorted -- if the value at arr[left] is less than the value at arr[mid], then the left side is sorted
     if (arr[left] <= arr[mid]) {
+      console.log(`left array is sorted`);
       if (arr[left] <= element && element <= arr[mid]) {
-        //target is in the left side
+        //element is in the left side
         right = mid - 1;
       } else {
-        //target is in the right side
+        //element is in the right side
         left = mid + 1;
       }
     } else {
       // the right side is sorted
       if (arr[right] >= element && element >= arr[mid]) {
-        //target is on the right side
+        //element is on the right side
         left = mid + 1;
       } else {
         right = mid - 1;
@@ -74,3 +78,5 @@ const findElementBinarySearch = (arr, element) => {
 };
 
 console.log(findElementBinarySearch([4, 5, 8, 10, 1, 2, 3], 8));
+console.log(findElementBinarySearch([4, 5, 8, 10, 1, 2, 3], 2));
+console.log(findElementBinarySearch([8, 9, 10, 5, 7], 5));
