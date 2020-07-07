@@ -30,7 +30,7 @@ const findContinousSubArray = (arr, sum) => {
 
     //while the currentSum becomes larger than the sum, subtract the beginning of the array
     //value of start cannot exceed i
-    while (currentSum > sum && start < i - 1) {
+    while (currentSum > sum && start < i) {
       currentSum = currentSum - arr[start];
       start++;
     }
