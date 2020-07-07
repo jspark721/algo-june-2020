@@ -17,7 +17,7 @@ we can check every subarray and see if that subarray equals the given sum, run t
 
 so instead, we can keep a memory of current sum and initialize a start value and iterate through the array adding all the values and checking the current sum with the sum we need to find. 
 
-this will have time complexiy of O(n) and space complexity of O(n)
+this will have time complexiy of O(n) and space complexity of O(1)
 */
 
 const findContinousSubArray = (arr, sum) => {
