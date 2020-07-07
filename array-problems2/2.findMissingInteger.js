@@ -22,17 +22,20 @@ constraints: optimize -- get faster time complexity
 
 const findMissingInteger = (arr) => {
   //edge case
-  if(arr.length === 0) return -1;
-  
+  if (arr.length === 0) return -1;
+
   let n = arr.length;
-  let sum = (n*(n+1))/2; // sum of all numbers from 0 to n by series computation formula
+  let sum = (n * (n + 1)) / 2; // sum of all numbers from 0 to n by series computation formula
   let actualSum = 0;
-  
-  for(let i = 0; i < n; i++) {
+
+  for (let i = 0; i < n; i++) {
     actualSum += arr[i];
   }
   return sum - actualSum;
 };
 
-console.log(findMissingInteger([3,5,2,4])) // return 1;
-console.log(findMissingInteger([1,6,8,3,5,2,4])) // return 7;
+console.log(findMissingInteger([3, 5, 2, 4])); // return 1;
+console.log(findMissingInteger([1, 6, 8, 3, 5, 2, 4])); // return 7;
+
+// time complexity: O(n)
+// space complexity: O(n) space because the space increases with input size of the array
