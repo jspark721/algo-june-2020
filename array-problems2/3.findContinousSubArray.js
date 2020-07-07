@@ -13,9 +13,11 @@ Output: Sum found between indexes 1 and 4
 Input: arr[] = {1, 4}, sum = 0
 Output: No subarray found
 
-we can check every subarray and see if that subarray equals the given sum, 
-run two loops so this would be O(n^2) running time
+we can check every subarray and see if that subarray equals the given sum, run two nested loops so this would be O(n^2) running time
 
+so instead, we can keep a memory of current sum and initialize a start value and iterate through the array adding all the values and checking the current sum with the sum we need to find. 
+
+this will have time complexiy of O(n) and space complexity of O(n)
 */
 
 const findContinousSubArray = (arr, sum) => {
