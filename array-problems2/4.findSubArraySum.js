@@ -10,28 +10,20 @@ Ouptut: Sum found between indexes 0 to 3
 Input: arr[] = {-10, 0, 2, -2, -20, 10}, sum = 20
 Ouptut: No subarray with given sum exists
 
-*/
+so for this problem, we want to create a hashmap to store key value pair 
+and keep a memory of the current sum of the array as we are iterating through
+from start to end
 
-/*
+at each current sum, we are going to check if the sum equals the sum we are looking for,
+then we will break out of the loop, initialize the start to 0 and end variable to i
+and then we will print out the statement
 
-Given an unsorted array of nonnegative integers, find a continous subarray which adds to a given number.
-Examples :
-Input: arr[] = {1, 4, 20, 3, 10, 5}, sum = 33
-Output: Sum found between indexes 2 and 4
-20+3+10 = 33
- 
-Input: arr[] = {1, 4, 0, 0, 3, 10, 5}, sum = 7
-Output: Sum found between indexes 1 and 4
-4 + 0 + 0 + 3 = 7 
+if not, then we keep going through the for loop and check 
+if the hashtable already has the value of currentSum - sum, then 
+we're going to update the start variable to the value at that hashtable + 1
+and end variable will equal to the current index we are at and we can break out of the loop
 
-Input: arr[] = {1, 4}, sum = 0
-Output: No subarray found
-
-we can check every subarray and see if that subarray equals the given sum, run two nested loops so this would be O(n^2) running time
-
-so instead, we can keep a memory of current sum and initialize a start value and iterate through the array adding all the values and checking the current sum with the sum we need to find. 
-
-this will have time complexiy of O(n) and space complexity of O(1)
+if the currentsum doesn't exist in the hashtable yet, we are going to add it 
 */
 
 const findContinousSubArray = (arr, sum) => {
@@ -59,6 +51,7 @@ const findContinousSubArray = (arr, sum) => {
     if (hash[currentSum - sum]) {
       start = hash[currentSum - sum] + 1;
       end = i;
+      console.log(`start: ${start} end: ${end}`);
       break;
     }
     //if value is not present, add it to hash table
@@ -66,7 +59,7 @@ const findContinousSubArray = (arr, sum) => {
     console.log(hash);
   }
   if (end === -1) {
-    return 'No subarray with given sum exists';
+    return "No subarray with given sum exists";
   }
   return `Sum found between indexes ${start} and ${end}`;
 };
