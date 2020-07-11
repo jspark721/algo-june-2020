@@ -2,8 +2,8 @@
 Given a 2D array, print it in spiral form. See the following examples.
 Examples:
 Input:
-    	1	   2   3   4
-    	5	   6   7   8
+    	1   2   3   4
+    	5   6   7   8
     	9   10  11  12
     	13  14  15  16
 Output:
