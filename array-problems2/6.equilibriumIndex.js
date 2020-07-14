@@ -21,6 +21,7 @@ a[0] + a[1] + a[2] + a[3]  =  a[5] + a[6] + a[7];
 
 const equilibriumIndex = (arr) => {
   if (arr.length === 0) return -1;
+  ß;
 
   //initialize total sum and left sum
   let totalsum = 0;
@@ -29,7 +30,9 @@ const equilibriumIndex = (arr) => {
   //get the total sum of the array using forEach
   arr.forEach((num) => (totalsum += num));
 
-  //to get the equilibrium index, we get the total sum of the array and then subract the leftsum of the array (this gets the right sum of the array) and then we need to subtract the equilibrium element arr[i] and that needs to equal leftsum
+  //to get the equilibrium index, we get the total sum of the array and then subract the
+  //leftsum of the array (this gets the right sum of the array) and then we need to subtract
+  //the equilibrium element arr[i] and that needs to equal leftsum
   //totalsum - leftsum - arr[i] === leftsum // then we found the equilibrium index
 
   for (let i = 0; i < arr.length; i++) {
