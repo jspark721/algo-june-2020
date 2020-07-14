@@ -35,7 +35,12 @@ const decreasingFrequency = (arr) => {
     }
     hash[arr[i]]++;
   }
+
+  //get the keys of the hash table
   let keys = Object.keys(hash);
+
+  //sort the keys by decreasing frequency
+  //then while the value of each key is more than 0, we'll add the num value to the results array, make sure to change the key from a '' to a number
   keys
     .sort(function (a, b) {
       return hash[b] - hash[a];
