@@ -1,0 +1,5 @@
+/* 
+
+Reverse a stack and put the reversed value back in the same stack. You can use only one other stack and a temp variable
+
+*/
