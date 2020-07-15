@@ -25,7 +25,6 @@ then print out, starting from max key value, and decrement the value
 const decreasingFrequency = (arr) => {
   let result = [];
   let hash = {};
-  let sortedHash = {};
 
   if (arr.length === 0) return result;
 
