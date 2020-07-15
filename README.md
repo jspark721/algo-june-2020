@@ -1,6 +1,8 @@
-### Algorithms & Data Structures Class Assignments
+# Algorithms & Data Structures Course
 
-#### Array Problems
+## Assignments
+
+### Array Problems
 
 - [x] Find Single Number
 - [x] Magic Index
@@ -19,13 +21,13 @@
 - [x] Print in Spiral
 - [x] Print Array in Decreasing Frequency
 
-#### Stack Problems
+### Stack Problems
 
 - [ ] Find Missing Parenthesis
 - [ ] Evaluate an Expression
 - [ ] Reverse a Stack
 
-#### String Problems
+### String Problems
 
 - [ ] Unique Characters
 - [ ] Permutation of Strings
