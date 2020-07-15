@@ -42,3 +42,6 @@ const findMissingParenthesis = (str) => {
 
 console.log(findMissingParenthesis('- 2 * (3 + 5(sasdfasdfasd)')); // missing )
 console.log(findMissingParenthesis('34 * 4+(21/3 * 5))')); // missing (
+
+//time complexity O(n) -- looping through the string once
+// space complexity O(n) -- using a new stack data structure
