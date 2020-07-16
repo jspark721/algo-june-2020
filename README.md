@@ -29,9 +29,9 @@
 
 ### String Problems
 
-- [ ] Unique Characters
-- [ ] Permutation of Strings
-- [ ] Replace All Spaces
+- [x] Unique Characters
+- [x] Permutation of Strings
+- [x] Replace All Spaces
 - [ ] Basic Spring Compression
 - [ ] Set Rows and Columns to Zero
 - [ ] Print Longest Common Subsequence
