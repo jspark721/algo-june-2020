@@ -23,9 +23,9 @@
 
 ### Stack Problems
 
-- [ ] Find Missing Parenthesis
-- [ ] Evaluate an Expression
-- [ ] Reverse a Stack
+- [x] Find Missing Parenthesis
+- [x] Evaluate an Expression
+- [x] Reverse a Stack
 
 ### String Problems
 
