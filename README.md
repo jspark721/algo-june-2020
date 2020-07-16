@@ -32,6 +32,6 @@
 - [x] Unique Characters
 - [x] Permutation of Strings
 - [x] Replace All Spaces
-- [ ] Basic Spring Compression
+- [x] Basic Spring Compression
 - [ ] Set Rows and Columns to Zero
 - [ ] Print Longest Common Subsequence
