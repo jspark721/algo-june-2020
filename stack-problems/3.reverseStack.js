@@ -31,9 +31,12 @@ const reverseAStack = (stack) => {
 
   let reversedStack = [];
 
+  //using this temp stack, pop off the stack
   while (stack.length > 0) {
     reversedStack.push(stack.pop());
   }
+
+  //it's in reverse order but we have to put it back into the original stack, so we're going to push to the stack from the front of the reversed stack
   while (reversedStack.length > 0) {
     stack.push(reversedStack.shift());
   }
