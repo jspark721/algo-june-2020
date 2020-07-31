@@ -33,5 +33,5 @@
 - [x] Permutation of Strings
 - [x] Replace All Spaces
 - [x] Basic Spring Compression
-- [ ] Set Rows and Columns to Zero
-- [ ] Print Longest Common Subsequence
+- [x] Set Rows and Columns to Zero
+- [x] Print Longest Common Subsequence
