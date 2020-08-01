@@ -18,33 +18,51 @@ it will need to become
 const setMatrixToZero = (matrix) => {
   if (matrix.length === 0) return -1;
 
-  //to check if any of the values in first column (col0) is zero
-  let col0 = 1;
+  //to check if any of the values in first column or first row contains zero
+  let firstColZero = false;
+  let firstRowZero = false;
+
   let row = matrix.length;
   let col = matrix[0].length;
 
+  for (let i = 0; i < col; i++) {
+    if (matrix[0][i] === 0) {
+      firstRowZero = true;
+    }
+  }
+
   for (let i = 0; i < row; i++) {
     if (matrix[i][0] === 0) {
-      //if any of the rows columns are zero, set col0 to zero
-      col0 = 0;
+      firstColZero = true;
     }
-    //now start from 2nd column/ index 1, and check if any items are zeroes and set it to zero if it is
+  }
+
+  //iterate over the matrix and for every matrix[i][j] that is 0, set the row and col value to 0
+  for (let i = 1; i < row; i++) {
     for (let j = 1; j < col; j++) {
-      if (matrix[i][j] === 0) {
+      if (matrix[i][j] == 0) {
         matrix[i][0] = 0;
         matrix[0][j] = 0;
       }
     }
   }
-
-  for (let i = row - 1; i >= 0; i--) {
-    for (let j = col - 1; j > 0; j--) {
-      if (matrix[i][0] === 0 || matrix[0][j] === 0) {
-        console.log(matrix[i][j], matrix);
+  //now we need to update the values of the matrix except for first row and first col
+  for (let i = 1; i < row; i++) {
+    for (let j = 1; j < col; j++) {
+      if (matrix[i][0] == 0 || matrix[0][j] == 0) {
         matrix[i][j] = 0;
       }
     }
-    if (col0 === 0) {
+  }
+
+  //if firstrowzero and firstcolzero are true, set them all to 0
+  if (firstRowZero) {
+    for (let i = 0; i < col; i++) {
+      matrix[0][i] = 0;
+    }
+  }
+  if (firstColZero) {
+    for (let i = 0; i < row; i++) {
       matrix[i][0] = 0;
     }
   }
@@ -58,3 +76,6 @@ let matrix = [
 ];
 
 console.log(setMatrixToZero(matrix));
+
+//time complexity: O(M) + O(N) + O(M*N) + O(M) + O(N) = O(2M) + O(2N) + O(M*N)
+//space complexity: O(1) , not taking any extra space and updating values in place
