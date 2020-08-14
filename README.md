@@ -35,3 +35,14 @@
 - [x] Basic Spring Compression
 - [x] Set Rows and Columns to Zero
 - [x] Print Longest Common Subsequence
+
+### Linked List Problems 
+- [x] Check if Linked List is a Palindrome
+- [x] Determine if Linked List is Circular
+- [ ] Clone a Linked List 
+- [ ] Remove Duplicates from a Linked List
+- [ ] Find Kth to the Last Element 
+- [ ] Delete a Node from Singly Linked List
+- [ ] Partition a Linked List
+- [ ] Reverse a Linked List
+- [ ] Construct a Balanced BST
