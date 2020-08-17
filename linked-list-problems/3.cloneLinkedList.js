@@ -47,8 +47,8 @@ const cloneLinkedList = (head) => {
   //set the current back to head to start from the beginning
   current = head;
   while (current !== null) {
-    clonedList.get(current).next = clonedList.get(current.next);
-    clonedList.get(current).random = clonedList.get(current.random);
+    clonedList.get(current).next = clonedList.get(current.next) || null;
+    clonedList.get(current).random = clonedList.get(current.random) || null;
     current = current.next;
   }
 
