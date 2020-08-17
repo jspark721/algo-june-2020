@@ -44,5 +44,5 @@
 - [ ] Find Kth to the Last Element 
 - [ ] Delete a Node from Singly Linked List
 - [ ] Partition a Linked List
-- [ ] Reverse a Linked List
+- [x] Reverse a Linked List
 - [ ] Construct a Balanced BST

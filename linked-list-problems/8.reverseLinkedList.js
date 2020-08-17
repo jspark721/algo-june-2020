@@ -9,6 +9,8 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+
+//iterative
 let reverseList = function (head) {
   if (head === null) {
     return head;
