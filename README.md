@@ -41,8 +41,8 @@
 - [x] Check if Linked List is a Palindrome
 - [x] Determine if Linked List is Circular
 - [x] Clone a Linked List
-- [ ] Remove Duplicates from a Linked List
-- [ ] Find Kth to the Last Element
+- [x] Remove Duplicates from a Linked List
+- [x] Find Kth to the Last Element
 - [ ] Delete a Node from Singly Linked List
 - [ ] Partition a Linked List
 - [x] Reverse a Linked List
