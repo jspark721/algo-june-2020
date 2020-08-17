@@ -55,3 +55,6 @@ const cloneLinkedList = (head) => {
 
   return clonedList.get(head); //this will return the cloned list with all the next and random pointers assigned
 };
+
+//time complexity: O(2n), going over the linked list twice
+//space complexity: O(n) -- additional use of space for hash table
