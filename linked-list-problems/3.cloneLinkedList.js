@@ -32,7 +32,8 @@ const cloneLinkedList = (head) => {
   let current = head;
   while (current !== null) {
     //give all the nodes mapping to the cloned value
-    clonedList.set(current, new Node(current.val));
+    let copy = new Node(current.val);
+    clonedList.set(current, copy);
     current = current.next;
     /*
     Map{
