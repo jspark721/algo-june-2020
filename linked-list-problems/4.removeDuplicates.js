@@ -46,3 +46,6 @@ mylist.next.next.next.next = new ListNode(21);
 */
 
 console.log(removeDuplicates(mylist));
+
+// time complexity: O(n^2)
+// space complexity: O(1) // not using temporary buffer
