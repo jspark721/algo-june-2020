@@ -51,3 +51,6 @@ const partitionLinkedList = (head, x) => {
 
   return smallList.next;
 };
+
+//time complexity: O(n) - iterating over the original list
+//space complexity: O(1) - we are not using any extra space, we are just reforming the oringal list by moving the original nodes
