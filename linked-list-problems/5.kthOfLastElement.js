@@ -36,5 +36,5 @@ const findKthNode = (head, k) => {
   return first;
 };
 
-//time complexity: O(n)
+//time complexity: O(n + k) where n is the number of nodes in the list and k is the kth value
 //space complexity: O(1)
