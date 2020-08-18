@@ -43,7 +43,7 @@
 - [x] Clone a Linked List
 - [x] Remove Duplicates from a Linked List
 - [x] Find Kth to the Last Element
-- [ ] Delete a Node from Singly Linked List
+- [x] Delete a Node from Singly Linked List
 - [ ] Partition a Linked List
 - [x] Reverse a Linked List
 - [ ] Construct a Balanced BST
