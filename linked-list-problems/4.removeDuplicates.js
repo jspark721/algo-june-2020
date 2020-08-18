@@ -7,7 +7,7 @@
  * 3->5->3->1
  * 3->5->1
  *
- * use two loops
+ * use two loops and at the current node, traverse through the list with a temp variable and check if it is a duplicate of the current node
  */
 
 function ListNode(value, next) {
