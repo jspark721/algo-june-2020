@@ -44,6 +44,6 @@
 - [x] Remove Duplicates from a Linked List
 - [x] Find Kth to the Last Element
 - [x] Delete a Node from Singly Linked List
-- [ ] Partition a Linked List
+- [x] Partition a Linked List
 - [x] Reverse a Linked List
-- [ ] Construct a Balanced BST
+- [x] Construct a Balanced BST
